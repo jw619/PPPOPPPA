@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Formation Optimizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        select, button { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc; }
+        button { background-color: #007bff; color: white; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #result { margin-top: 20px; padding: 10px; background-color: #f0f0f0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h2>Football Formation Optimizer</h2>
+    <form id="formation-selection-form">
+        <div class="form-group">
+            <label for="formation-select">Choose a Formation:</label>
+            <select id="formation-select">
+                <option value="">Select Formation</option>
+                <option value="433h">4-3-3H</option>
+                <option value="424">4-2-4</option>
+                <option value="352">3-5-2</option>
+                <!-- Add more formations as needed -->
+            </select>
+        </div>
+        
+        <!-- Repeat this structure for each position -->
+        <div class="form-group">
+            <label for="st-count-select">Strikers (ST):</label>
+            <select id="st-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="lw-count-select">Left Wingers (LW):</label>
+            <select id="lw-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rw-count-select">Right Wingers (RW):</label>
+            <select id="rw-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cm-count-select">Center Midfielders (CM):</label>
+            <select id="cm-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cdm-count-select">Central Defensive Midfielders (CDM):</label>
+            <select id="cdm-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="rb-count-select">Right Backs (RB):</label>
+            <select id="rb-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <!-- 필요한 경우 더 추가 -->
+            </select>
+        </div>
+
+        <!-- Center Backs (CB) -->
+        <div class="form-group">
+            <label for="cb-count-select">Center Backs (CB):</label>
+            <select id="cb-count-select">
+                <option value="0">0</option>
+                <option value="2">2</option> <!-- 중앙 수비수는 보통 2명이므로 -->
+                <!-- 필요한 경우 더 추가 -->
+            </select>
+        </div>
+
+        <!-- Left Backs (LB) -->
+        <div class="form-group">
+            <label for="lb-count-select">Left Backs (LB):</label>
+            <select id="lb-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <!-- 필요한 경우 더 추가 -->
+            </select>
+        </div>
+
+        <!-- Goalkeeper (GK) -->
+        <div class="form-group">
+            <label for="gk-count-select">Goalkeeper (GK):</label>
+            <select id="gk-count-select">
+                <option value="0">0</option>
+                <option value="1">1</option> <!-- 골키퍼는 보통 1명이므로 -->
+            </select>
+        </div>
+        
+        <!-- Add additional positions as needed -->
+
+        <button type="button" id="calculate">Calculate Best Lineup</button>
+    </form>
+    <div id="result"></div>
+
+    <!-- Include your JavaScript file here -->
+    <script src="script.js"></script>
+</body>
+</html>
